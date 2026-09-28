@@ -1,0 +1,24 @@
+#content {
+    max-width: 60%;
+    margin: 40px auto;
+}
+li {
+    text-align: left;
+    margin-top: 15px;
+}
+img{
+    display: block;
+    width: 50%;
+   margin: 50px auto;
+}
+h3 {
+    color: #1596dc;
+    text-align: center;
+}
+.italic{
+    font-style: italic;
+    text-align: left;
+}
+h1{
+    text-align: center;
+}
