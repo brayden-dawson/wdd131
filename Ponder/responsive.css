@@ -76,7 +76,7 @@ footer {
         width: 300px;
     }
     header, main, footer {
-        max-width: 1400px;
+        max-width: auto;
     }
 }
 
