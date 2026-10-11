@@ -1,4 +1,4 @@
-header, main, footer {
+header, footer {
     max-width: 100%;
     margin: 1rem auto;
     padding: 1rem;
@@ -33,38 +33,70 @@ nav a:hover {
 footer {
     text-align: center;
 }
-img {
-    margin: 5px;
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 220px;
     object-fit: cover;
     border: 5px white solid;
     box-shadow: 5px 5px 10px black;
 }
 section {
     text-align: center;
-    background-color: skyblue;
+    background-color: #616061;
 }
-main, h2 {
+section, h2 {
     background-color: lightgray;
     margin: -10px;
     text-align: center;
 }
-@media (min-width: 300px) {
-    main {
-        display: grid;
-        grid-template-columns: 1fr;
-        place-items: center;
-    }
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
 }
+
+.gallery figure {
+    margin: 0;
+    min-width: 0;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+dialog {
+    max-width: 90vw;
+    max-height: 90vh;
+    padding: 20px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+dialog img {
+    display: block;
+    max-width: 85vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
 @media (min-width: 600px) {
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        text-align: center;
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
 @media (min-width: 1000px) {
-    main {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
