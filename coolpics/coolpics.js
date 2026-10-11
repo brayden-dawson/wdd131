@@ -1,21 +1,42 @@
-// 1. Grab our HTML elements
+// ==========================================
+// 1. Navigation Menu Toggle (from responsive.js)
+// ==========================================
+
+// Step 1: Select menu from DOM
+const menuButton = document.querySelector(".menu-btn");
+const nav = document.querySelector("nav");
+
+menuButton.addEventListener("click", () => {
+    // Toggle the 'open' class on the nav element
+    nav.classList.toggle("open");
+    
+    // Toggle the X animation on the button
+    menuButton.classList.toggle("change");
+});
+
+
+// ==========================================
+// 2. Gallery Modal Viewer (from coolpics.js)
+// ==========================================
+
+// Grab our HTML elements
 const gallerySection = document.querySelector('.gallery');
 const modal = document.querySelector('dialog');
 const modalImg = modal.querySelector('img');
 const closeButton = modal.querySelector('.close-viewer');
 
-// 2. Add an event listener, when img clicked open modal
+// Add an event listener, when img clicked open modal
 gallerySection.addEventListener('click', (event) => {
-    if(event.target.src !== undefined) {
+    if (event.target.src !== undefined) {
         console.log(event.target.src);
-    // display modal
+        // Display modal
         modal.showModal();
-    // set the src image of modal
+        // Set the src image of modal (swapping sm for full)
         modalImg.src = event.target.src.replace("-sm", "-full");
     }
 });
 
-// 3. Close modal
+// Close modal via close button
 closeButton.addEventListener('click', () => {
     modal.close();
 });
