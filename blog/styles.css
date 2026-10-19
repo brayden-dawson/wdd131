@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: calc(100% - 2rem);
+    max-width: 1000px;
+    margin: 2rem auto;
+    border: none;
+    color: #111;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+header { text-align: center; }
+
+h1 {
+    margin: 1rem 0;
+    color: #493947;
+    font-size: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    border-top: 1px solid #f1c7a8;
+    border-bottom: 1px solid #f1c7a8;
+}
+
+nav a {
+    color: #9d1025;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+nav a:hover, nav a:focus { 
+    text-decoration: underline; 
+}
+
+.blog-grid {
+    display: block;
+    padding: 2rem;
+}
+
+.book-details {
+    margin: 0 0 1.5rem;
+    text-align: right;
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.15;
+}
+
+.book-details p { 
+    margin: 4px 0; 
+}
+
+.rating {
+    color: #f2b400;
+    font-style: normal;
+    letter-spacing: 0.1rem;
+}
+
+.target { 
+    display: none; 
+}
+.book { 
+    text-align: left; 
+}
+
+h2 {
+    margin: 0 0 1rem;
+    color: #a7192e;
+    font-size: 1.4rem;
+}
+
+.book-image-container { 
+    text-align: center; }
+
+.book-cover {
+    display: inline-block;
+    width: 160px;
+    height: auto;
+}
+
+.description {
+    margin: 1.5rem 0 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+footer {
+    padding: 1rem;
+    border-top: 1px solid #f1c7a8;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p { margin: 0; }
+
+@media (min-width: 600px) {
+    .blog-grid {
+        display: grid;
+        grid-template-columns: 23% 77%;
+        min-height: 205px;
+    }
+
+    .book-details {
+        margin: 0;
+        padding: 0 20px 0 0;
+        border-right: 1px solid #f1c7a8;
+    }
+
+    .book { padding-left: 18px; }
+    .book-cover { width: 160px; }
+    .description { max-width: 500px; margin: 1.5rem auto 0; }
+}
