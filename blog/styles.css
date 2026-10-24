@@ -38,9 +38,9 @@ nav a:hover, nav a:focus {
     text-decoration: underline; 
 }
 
-#blog {
+.blog-post {
     display: block;
-    padding: 2rem;
+    padding: 2rem 0;
 }
 
 .book-details {
@@ -99,7 +99,7 @@ footer {
 footer p { margin: 0; }
 
 @media (min-width: 600px) {
-    #blog {
+    .blog-post {
         display: grid;
         grid-template-columns: 23% 77%;
         min-height: 205px;

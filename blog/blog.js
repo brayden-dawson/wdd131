@@ -42,21 +42,25 @@ const articles = [
 
     articles.forEach(article => {
         
-    const blog = `
+   const blog = `
+    <div class="blog-post">
         <aside class="book-details">
             <p class="date">${article.date}</p>
             <p class="age">${article.ages}</p>
             <p class="genre">${article.genre}</p>
             <p class="rating">${article.stars}</p>
         </aside>
+
         <article class="book">
             <h2 class="title">${article.title}</h2>
             <div class="book-image-container">
-                <img src=${article.imgSrc} alt=${article.imgAlt} class="book-cover">
+                <img src="${article.imgSrc}" alt="${article.imgAlt}" class="book-cover">
             </div>
             <p class="description">${article.description}</p>
-        </article>  
-        `
-    document.getElementById("blog").innerHTML += blog;
+        </article>
+    </div>
+`;
+
+document.getElementById("blog").innerHTML += blog;
 
     });
