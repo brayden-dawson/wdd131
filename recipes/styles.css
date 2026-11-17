@@ -1,0 +1,271 @@
+#logo{
+    width: 150px;
+    height: 150px;
+}
+
+#apple-crisp{
+    flex: 1 1 400px;
+    max-width: 400px;
+}
+
+#search-button{
+    width: 30px;
+    height: 30px;
+}
+
+.text{
+    flex-wrap: wrap;
+}
+
+.recipe-card{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px black solid;
+    border-radius: 15px;
+    padding: 9px;
+    margin: 15px;
+    flex-direction: column;
+    height: 300px;
+    gap: 1em;
+    justify-content: center;
+}
+
+
+.tag{
+    background-color: lightgray;
+    border: 2px black solid;
+    width: 50px;
+    padding: 2px;
+}
+
+.name{
+    color:cornflowerblue;
+}
+
+p{
+    max-width: 400px;
+}
+
+/* Responsive corrections */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 1.5rem 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+main,
+footer {
+    width: min(100%, 980px);
+    margin-inline: auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+#logo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.search {
+    display: flex;
+    width: 100%;
+    border: 1px solid #777;
+}
+
+.search input {
+    flex: 1 1 auto;
+    min-width: 0;
+    border: 0;
+    padding: .45rem;
+}
+
+.search button {
+    display: grid;
+    flex: 0 0 2rem;
+    place-items: center;
+    border: 0;
+    border-left: 1px solid #777;
+    background: #fff;
+}
+
+.search button img {
+    width: 22px;
+    height: 22px;
+}
+
+main {
+    margin-top: 1rem;
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    height: auto;
+    margin: 0;
+    padding: .65rem;
+    border: 1px solid #777;
+    border-radius: 4px;
+}
+
+#apple-crisp {
+    display: block;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .35rem;
+}
+
+.tag {
+    margin: 0;
+    padding: .15rem .3rem;
+    border: 1px solid #bbb;
+    font-size: .7rem;
+}
+
+.name {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.description {
+    margin: 0;
+    font-size: .72rem;
+    line-height: 1.35;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: .65rem;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    order: 1;
+    gap: .3rem;
+}
+
+footer > a {
+    order: 2;
+}
+
+.social a {
+    display: grid;
+    width: 1.5rem;
+    height: 1.5rem;
+    place-items: center;
+    border: 1px solid #111;
+    border-radius: 2px;
+}
+
+.social img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Desktop: place the image and recipe details side by side. */
+@media (min-width: 700px) {
+    body {
+        padding: 2.5rem 2rem;
+    }
+
+    header {
+        align-items: stretch;
+        gap: 1.25rem;
+    }
+
+    .brand {
+        align-self: center;
+    }
+
+    .recipe-card {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: .75rem;
+        padding: .75rem;
+    }
+
+    #apple-crisp {
+        flex: 0 1 42%;
+        width: 42%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .text {
+        flex: 1 1 58%;
+        padding-top: .05rem;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        text-align: left;
+    }
+
+    footer > a {
+        order: 1;
+        margin-right: auto;
+    }
+
+    .social {
+        order: 2;
+    }
+}
